@@ -1,24 +1,37 @@
 export default () => {
+  const listado = 'listado...';
+  const idCheckbox = 'id01';
+  const newArray = [];
+  firebase.firestore().collection('donaciones').onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      newArray.push({
+        id: doc.id,
+        descripcion: doc.data().descripcion
+      })
+    });
+    dataSnapshot(newArray);
+  });   
   const formElem = document.createElement('form');
-  const formContent = `<div>
+  const formContent = `
+  <div>
       <h2>Lista de Espera</h2>
       <div>
         <table border="1">
-            <tr>
-                <th>Lista de Artículos donados</th>
-                <th>Marcar como recibido</th>
-            </tr> 
-            <tr>
-                <td>
-                    ${listado}
-                </td>
-                <td>
-                    <input type="checkbox" id= "${idCheckbox}"/>
-                </td>
-            </tr>
+          <tr>
+            <td>Lista de Artículos donados</td>
+            <td>Marcar como recibido</td>
+          </tr> 
+          <tr>
+              <td>
+                  ${newArray.descripcion}
+              </td>
+              <td>
+                  <input type="checkbox" id= "${newArray.id}"/>
+              </td>
+          </tr>
         </table>
       </div>
-      <button id="btn-login" type="button" class="btn-registrar">Cambiar Estatus</button>
+      <button id="btn-estatus" type="button">Cambiar Estatus</button>
     </div>`;
   formElem.setAttribute('id', 'frm-instituciones');
   formElem.innerHTML = formContent;
