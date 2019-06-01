@@ -4,6 +4,21 @@ import formDonante from './lib/ui/form-donante.js';
 import formInstituciones from './lib/ui/form-instituciones.js';
 import perfil from './lib/ui/perfil.js';
 import donativos from './lib/ui/donativos.js';
+// import getInstituciones from '../src/lib/controller/c-get-instituciones.js';
+
+const getInstituciones = (dataSnapshot) =>{
+  const newArray = [];
+  firebase.firestore().collection("Instituciones").onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          newArray.push({
+              id:doc.id,
+              nombre: doc.data().nombre,
+              descripcion: doc.data().descripcion,
+          })           
+      });
+      dataSnapshot(newArray);
+  });    
+}
 
 export const viewTemplate = (routers) => {
   const router = routers.substr(2, routers.length - 2);
@@ -17,7 +32,10 @@ export const viewTemplate = (routers) => {
     container.appendChild(login());
     break;
   case 'formDonante':
-    container.appendChild(formDonante());
+  getInstituciones((data) =>{
+    container.appendChild(formDonante(data));
+  })
+    
 //     const agregaOtro = document.querySelector('#agrega-otros');
 // agregaOtro.addEventListener('click', () => {
 //     const divContain = document.querySelector('prueba');
