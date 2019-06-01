@@ -30,10 +30,19 @@
     max-width: 250px;
     max-height: 200px;
 }
-.color-b {
-    background: #131314dc;
+.img-p {
+    max-width: 500px;
+    max-height: 500px;
 }
 
+
+.color-b {
+    background: #0c0c0c59;
+}
+.img-c {
+    width: 1350px;
+    height: 500px;
+}
 .text-e {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
@@ -46,10 +55,7 @@
     bottom: 0;
 }
 .container-login{
-    max-width: 70%;
-}
-
-.login{
+    width: 500px;
 }
 
 .main-perfil__p, .main-perfil__p{
