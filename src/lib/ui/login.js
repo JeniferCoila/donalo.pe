@@ -27,7 +27,7 @@ export default () => {
     </div>
  
     <div class="d-flex justify-content-center margin-top-low">
-      <button id= "login-btn"class="width btn btn-lg btn-danger justify-content-center">INICIAR SESIÓN</button>
+      <button id= "login-btn"class="width btn btn-lg btn-info justify-content-center">INICIAR SESIÓN</button>
     </div>
   </div>
   

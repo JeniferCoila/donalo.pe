@@ -1,5 +1,5 @@
 /* import {btnGoogle} from '../view-controller/vc-signin.js';
- */
+ */ 
 export default () => {
   const formElem = document.createElement('form');
   const formContent = `
@@ -23,8 +23,8 @@ export default () => {
   
   const btnLoginGoogle = formElem.querySelector('#btn-google');
   btnLoginGoogle.addEventListener('click', () => {
-/*     btnGoogle();
- */    window.location.hash = '#/formDonante';
+/*   btnGoogle();
+ */  window.location.hash = '#/formDonante';
   }); 
   
   return formElem;
