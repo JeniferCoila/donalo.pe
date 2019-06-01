@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1>¡BIENVENIDO! ¿QUE DESEA DONAR?</h1>
-    <form>
+    <form id= "form-donacion">
+    <div id ="prueba">
     <input type="text" class="descripcion" id="descripcion-input" />
-    <button class="agregra-otros" id="agrega-otros"></button>
+    <button type="button" class="agregra-otros" id="agrega-otros">+</button>
+    </div>
     <select class="categoria" id="categoria-select">
       <option>Medicamentos</option>
       <option>Alimentos</option>
@@ -27,6 +29,6 @@
     <input type="date" class="fecha" id="fecha-input" />
     <button class="boton" id="boton-donar">DONAR!</button>
   </form>
-    <script src="frm.js"></script>
+    <script type="module" src="../view-controller/frm.js"></script>
 </body>
 </html>
