@@ -16,7 +16,7 @@ export const viewTemplate = (routers) => {
   case 'login':
     container.appendChild(login());
     break;
-  case 'fromDonante':
+  case 'formDonante':
     container.appendChild(formDonante());
     break;
   case 'perfil':
@@ -32,7 +32,7 @@ export const viewTemplate = (routers) => {
 };
 
 export const changeTemplate = (hash) => {
-  if (hash === '#/home' || hash === '#/login' || hash === '#/form-donante' || hash === '#/perfil' || hash === '#/form-instituciones'|| hash === '#/donativos') return viewTemplate(hash);
+  if (hash === '#/home' || hash === '#/login' || hash === '#/formDonante' || hash === '#/perfil' || hash === '#/formInstituciones'|| hash === '#/donativos') return viewTemplate(hash);
   else return viewTemplate('#/home'); 
 };
 

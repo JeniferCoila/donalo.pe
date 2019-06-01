@@ -1,9 +1,7 @@
 import {initRouter} from './router.js';
 import {configFirebase} from './lib/controller/c-firebase.js';
 
-const init = () => {
+window.addEventListener('load', () => {
   configFirebase();
   initRouter();
-};
-  
-window.onload = init();
+});
