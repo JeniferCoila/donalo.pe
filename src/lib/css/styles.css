@@ -81,3 +81,20 @@
     vertical-align: bottom;
     padding: 0.5em;
 }
+
+.main-perfil__p, .main-perfil__p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.main-perfil__span--puntos{
+    font-size: 16px;
+    
+}
+
+.fas {
+    font-size: 50px;
+    color: purple;
+    align-content: center
+    
+}
