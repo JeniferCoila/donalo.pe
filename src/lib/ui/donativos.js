@@ -28,10 +28,7 @@ export default () => {
       </form>
     `;
   formElem.innerHTML = formContent;
-  return formElem;
-};
-
-let contentDonacion = document.querySelector('content-donaciones');
+  let contentDonacion = document.querySelector('content-donaciones');
   
   const paintProducts = (collection, contenedor, category) => {
     contenedor.innerHTML = ` ` 
@@ -55,4 +52,8 @@ let contentDonacion = document.querySelector('content-donaciones');
 categorias.addEventListener('change', () => {
     paintProducts('donaciones', contentDonacion, categorias.value);
 })
+  return formElem;
+};
+
+
     
