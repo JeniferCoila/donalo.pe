@@ -2,4 +2,4 @@
 
 export const myFunction = () => {
   // aqui tu codigo
-}
+};
