@@ -1,13 +1,9 @@
 
-.btn-width{
-    width: 50%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-}
+
 .container-login{
-    max-width: 70%;
+    width: 500px;
 }
 
-.login{
+.container{
+ top: 30000px;
 }
