@@ -21,8 +21,8 @@ export default () => {
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit"><a href="">Donante</a></button>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="">Instituciones</a></button>
+                <button   id="donante-btn" class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">Donante</button>
+                <button  id="inst-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Instituciones</button>
               </form>
             </div>
           </nav>
@@ -148,5 +148,14 @@ export default () => {
         </footer>
     </div>`;
   formElem.innerHTML = formContent;
+
+  const donButton = formElem.querySelector('#donante-btn');
+  donButton.addEventListener('click', () => {
+    window.location.hash = '#/loginDon';
+  });
+  const instButton = formElem.querySelector('#inst-btn');
+  instButton.addEventListener('click', () => {
+    window.location.hash = '#/login';
+  });
   return formElem;
 };
