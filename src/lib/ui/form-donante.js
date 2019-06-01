@@ -1,4 +1,6 @@
-export default () => {
+
+
+export default (data) => {
   const formElem = document.createElement('form');
   /* Colocar en form content el html  */
   const formContent = `
@@ -21,6 +23,9 @@ export default () => {
     <option>Cambiando vidas</option>
     <option>Proa</option>
   </select>
+  <div class="institucion" id="institucion-container">
+  ${paintDonar(data)}
+  </div>
   <input type="date" class="fecha" id="fecha-input" />
   <button class="boton" id="boton-donar">DONAR!</button>
 </form>`;
@@ -38,14 +43,36 @@ const divContain = document.querySelector('#prueba');
 
   const btnSelect = formElem.querySelector('#instituciones-select');
   const descripcionSelect = () => {
-        const inputElement = document.createElement('input');
-        return inputElement;
+        const inputSelect = document.createElement('div');
+        return inputSelect;
     }
-  btnSelect.addEventListener('click', () => { 
-const divContain = document.querySelector('#prueba');
-    return divContain.appendChild(creaInput()); 
+  btnSelect.addEventListener('change', () => { 
+const divSelect = document.querySelector('#institucion-container');
+    return divSelect.appendChild(descripcionSelect()); 
   });
   
   return formElem;
 };
 // const descripcionValor = document.querySelector('#descripcion-input').value;
+
+
+export const paintDonar = (dataDonar) => {
+  let listaDonar = '';
+   dataDonar.forEach((doc) => {
+     const formPedido = `
+     <div class="container">
+        <div class="row">
+          <div class="column-6">
+            <div class="d-flex flex-row" id="donar">
+               <p type="text" id="text-${doc.nombre}">${doc.nombre}
+               </p>
+                <p class="pedido color-blanco" id="agregar-${doc.descripcion}">${doc.descripcion}</p>
+             </div>
+          </div>
+       </div>
+     </div>
+     `;
+     listaDonar +=formPedido;
+   });
+   return listaDonar;
+};
