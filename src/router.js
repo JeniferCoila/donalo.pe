@@ -18,6 +18,11 @@ export const viewTemplate = (routers) => {
     break;
   case 'formDonante':
     container.appendChild(formDonante());
+//     const agregaOtro = document.querySelector('#agrega-otros');
+// agregaOtro.addEventListener('click', () => {
+//     const divContain = document.querySelector('prueba');
+//     return divContain.appendChild(creaInput());
+  // });
     break;
   case 'perfil':
     container.appendChild(perfil());
