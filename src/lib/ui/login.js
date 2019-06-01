@@ -25,10 +25,12 @@ export default () => {
         <input type="password" class="form-control" placeholder="Contraseña" id="inputPassword" required>
       </div>
     </div>
+ 
     <div class="d-flex justify-content-center margin-top-low">
       <button id= "login-btn"class="width btn btn-lg btn-danger justify-content-center">INICIAR SESIÓN</button>
     </div>
   </div>
+  
 </div>`;
   formElem.setAttribute('id', 'frm-login');
   formElem.setAttribute('class', 'd-flex justify-content-center');
@@ -36,7 +38,7 @@ export default () => {
   formElem.innerHTML = formContent;
   const linkForm = formElem.querySelector('#login-btn');
   linkForm.addEventListener('click', () => {
-    window.location.hash = '#/formDonante';
+    window.location.hash = '#/formInstituciones';
   });
   return formElem;
 };
