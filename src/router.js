@@ -4,6 +4,7 @@ import formDonante from './lib/ui/form-donante.js';
 import formInstituciones from './lib/ui/form-instituciones.js';
 import perfil from './lib/ui/perfil.js';
 import donativos from './lib/ui/donativos.js';
+import loginDon from './lib/ui/loginDonante.js';
 // import getInstituciones from '../src/lib/controller/c-get-instituciones.js';
 
 const getInstituciones = (dataSnapshot) =>{
@@ -20,6 +21,8 @@ const getInstituciones = (dataSnapshot) =>{
   });    
 }
 
+
+
 export const viewTemplate = (routers) => {
   const router = routers.substr(2, routers.length - 2);
   const container = document.getElementById('container');
@@ -30,6 +33,9 @@ export const viewTemplate = (routers) => {
     break;
   case 'login':
     container.appendChild(login());
+    break;
+  case 'loginDon':
+    container.appendChild(loginDon());
     break;
   case 'formDonante':
   getInstituciones((data) =>{
@@ -55,7 +61,7 @@ export const viewTemplate = (routers) => {
 };
 
 export const changeTemplate = (hash) => {
-  if (hash === '#/home' || hash === '#/login' || hash === '#/formDonante' || hash === '#/perfil' || hash === '#/formInstituciones'|| hash === '#/donativos') return viewTemplate(hash);
+  if (hash === '#/home' || hash === '#/login' || hash === '#/formDonante' || hash === '#/perfil' || hash === '#/formInstituciones' || hash === '#/donativos' || hash === '#/loginDon') return viewTemplate(hash);
   else return viewTemplate('#/home'); 
 };
 
