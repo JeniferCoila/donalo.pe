@@ -12,7 +12,7 @@ export default () => {
             <option value="vestimenta">vestimenta</option>
           </select>
         </div>
-        <table>
+        <table class= "container-table">
           <thead>
               <tr>
                 <td>Fecha</td>
@@ -39,7 +39,7 @@ let contentDonacion = document.querySelector('content-donaciones');
         querySnapshot.forEach((doc) => {
            console.log(`${doc.id} => ${doc.data().nombre}`);
            contenedor.innerHTML += `
-               <tr class="" data-id-donacion="${doc.data().id}">                  
+               <tr css="table" data-id-donacion="${doc.data().id}">                  
                    <td> ${doc.data().fechaEntrega} </td>
                    <td> ${doc.data().cantidad} </td>
                    <td> ${doc.data().categoria} </td>
