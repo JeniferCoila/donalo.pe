@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+.body{
+    font-family: 'Lato', sans-serif;
+}
+.color-b-1 {
+  background-color: #beeef7;
+}
+.color-b-2 {
+    background-color: #6fc2d0;
+}
+.color-b-3 {
+    background-color: #373a6d;
+}
+.color-b-4 {
+    background-color: #ff8246;
+}
+.color-white {
+  color: azure;
+}
+.color-b-white {
+    background-color: azure;
+}
+.color-black {
+  color: black;
+}
+.color-g {
+    color: #383849
+}
+.img-e {
+    max-width: 250px;
+    max-height: 200px;
+}
+.color-b {
+    background: #131314dc;
+}
+
+.text-e {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+=======
 
 .btn-width{
     width: 50%;
@@ -11,3 +53,4 @@
 
 .login{
 }
+>>>>>>> 1897f83f2c37ab40052c01d6e95f35cb04d48596
