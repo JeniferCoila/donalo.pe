@@ -1,6 +1,9 @@
-// Este es el punto de entrada de tu aplicacion
-// Aquí se podría inicializar firebase
+import {initRouter} from './router.js';
+import {configFirebase} from './lib/controller/c-firebase.js';
 
-import { myFunction } from './lib/index.js';
-
-myFunction();
+const init = () => {
+  configFirebase();
+  initRouter();
+};
+  
+window.onload = init();
