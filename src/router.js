@@ -14,7 +14,7 @@ const getInstituciones = (dataSnapshot) =>{
           newArray.push({
               id:doc.id,
               nombre: doc.data().nombre,
-              descripcion: doc.data().descripcion,
+              descripción: doc.data().descripción,
           })           
       });
       dataSnapshot(newArray);

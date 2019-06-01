@@ -41,6 +41,11 @@ const divContain = document.querySelector('#prueba');
     return divContain.appendChild(creaInput()); 
   });
 
+  const btnDona = formElem.querySelector('#boton-donar');
+  btnDona.addEventListener('click', () => { 
+    window.location.hash = '#/perfil';
+      });
+
   const btnSelect = formElem.querySelector('#instituciones-select');
   const descripcionSelect = () => {
         const inputSelect = document.createElement('div');
@@ -66,7 +71,7 @@ export const paintDonar = (dataDonar) => {
             <div class="d-flex flex-row" id="donar">
                <p type="text" id="text-${doc.nombre}">${doc.nombre}
                </p>
-                <p class="pedido color-blanco" id="agregar-${doc.descripcion}">${doc.descripcion}</p>
+                <p class="pedido color-blanco" id="agregar-${doc.descripción}">${doc.descripción}</p>
              </div>
           </div>
        </div>
